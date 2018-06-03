@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:id="@+id/TempInput"
+        android:layout_width="157dp"
+        android:layout_height="39dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:inputType="numberDecimal"
+        android:numeric="decimal"
+        android:singleLine="true"
+        android:text="1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/En0Input"
+        tools:text="1" />
+
+    <EditText
+        android:id="@+id/En0Input"
+        android:layout_width="157dp"
+        android:layout_height="39dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:inputType="numberDecimal"
+        android:numeric="decimal"
+        android:singleLine="true"
+        android:text="1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/RatioInput"
+        tools:text="1" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="bildZeigen"
+        android:text="Los Gehts!"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/RatioInput"
+        android:layout_width="157dp"
+        android:layout_height="42dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:inputType="numberDecimal"
+        android:numeric="decimal"
+        android:singleLine="true"
+        android:text="0.5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="0.5" />
+
+    <TextView
+        android:id="@+id/RatioDescription"
+        android:layout_width="144dp"
+        android:layout_height="31dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginStart="16dp"
+        android:text="Rot zu Blau"
+        app:layout_constraintBaseline_toBaselineOf="@+id/RatioInput"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:text="Rot zu Blau" />
+
+    <TextView
+        android:id="@+id/En0Descriptin"
+        android:layout_width="143dp"
+        android:layout_height="27dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginStart="16dp"
+        android:text="@string/Beschreibung_En0"
+        app:layout_constraintBaseline_toBaselineOf="@+id/En0Input"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:text="@string/Beschreibung_En0" />
+
+    <TextView
+        android:id="@+id/TempDescription"
+        android:layout_width="143dp"
+        android:layout_height="27dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginStart="16dp"
+        android:text="@string/Beschreibung_Temp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/TempInput"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:text="@string/Beschreibung_Temp" />
+
+    <Spinner
+        android:id="@+id/FarbschemaSpinner"
+        android:layout_width="160dp"
+        android:layout_height="47dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="16dp"
+        android:entries="@array/FarbschemaArray"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/TempInput" />
+</android.support.constraint.ConstraintLayout>

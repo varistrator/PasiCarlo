@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">PasiCalro</string>
+    <string name="edit_message">Enter a message</string>
+    <string name="button_send">send</string>
+    <string name="Beschreibung_En0">Aktivierungsenergie</string>
+    <string name="Beschreibung_Temp">Temperatur</string>
+    <string name="title_activity_display_message">DisplayMessageActivity</string>
+    <string name="title_activity_zeige_bild">ZeigeBild</string>
+    <string-array name="FarbschemaArray">
+        <item>Bayern</item>
+        <item>Holland</item>
+        <item>Brasilien</item>
+    </string-array>
+</resources>
