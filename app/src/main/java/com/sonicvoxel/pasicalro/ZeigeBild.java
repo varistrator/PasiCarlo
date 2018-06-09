@@ -45,16 +45,7 @@ public class ZeigeBild extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        /**
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
-        });
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);**/
+
 
 
         Intent intent = getIntent();
@@ -128,17 +119,7 @@ public class ZeigeBild extends AppCompatActivity {
                 karte[dumy][dumx]=1;
             }
         }
-        /**
-        //if ( 1==1 ){
-            if (karte[dumy][dumx]==0 & en>=0){
-                karte[dumy][dumx]=1;
-            }
-            else if (karte[dumy][dumx]==1 & en<=0){
-                karte[dumy][dumx]=0;
-            }
 
-        }
-        **/
 
     }
 
@@ -178,9 +159,9 @@ public class ZeigeBild extends AppCompatActivity {
             }
         }
 
-        Paint paintUp = null;
-        Paint paintDown= null;
-        Paint paintBack= null;
+        Paint paintUp;
+        Paint paintDown;
+        Paint paintBack;
         int colorUp=Color.WHITE,colorDown=Color.BLUE;
         int anzx,anzy, grx,gry;
         byte [][] karte;
@@ -206,6 +187,21 @@ public class ZeigeBild extends AppCompatActivity {
                 case (2):{
                     colorUp=0xFF009b3a;//Grün
                     colorDown=0xFFFEDF00;//Gelb
+                    break;
+                }
+                case (3):{
+                    colorUp=Color.WHITE;
+                    colorDown=0xFFC70025;//Japan Rot
+                    break;
+                }
+                case (4):{
+                    colorUp=Color.WHITE;
+                    colorDown=0xFF006c35;//Saudi Arabien Grün
+                    break;
+                }
+                case (5):{
+                    colorUp=0xFFE0162B;//USA Rot
+                    colorDown=0xFF0052A5;//USA Blau
                     break;
                 }
                 default: break;
@@ -237,8 +233,8 @@ public class ZeigeBild extends AppCompatActivity {
             int offsetx,offsety;
             int startx,starty;
             canvas.drawPaint(paintBack);
-            offsetx=(int) (Math.round((x-anzx*grx)/2));
-            offsety=(int) (Math.round((y-anzy*gry)/2));
+            offsetx= (Math.round((x-anzx*grx)/2));
+            offsety= (Math.round((y-anzy*gry)/2));
 
 
 
